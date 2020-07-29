@@ -60,6 +60,7 @@ A set of YARA rules for the AIL framework to detect leak or information disclosu
 # Contributors
 
 - kevthehermit via [PasteHunter](https://github.com/kevthehermit/PasteHunter) for the initial rule set licensed under the GNU General Public License
+- [AlienVault-Labs](https://github.com/AlienVault-Labs/AlienVaultLabs/tree/master/malware_rulesets/yara) for some additional rules
 
 # License
 

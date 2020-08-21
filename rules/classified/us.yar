@@ -19,7 +19,17 @@ rule us
         $a11 = "ORIGINATOR CONTROLLED" fullword wide ascii nocase
         $a12 = "CONTROLLED IMAGERY" fullword wide ascii nocase
         $a13 = "SOURCES AND METHODS INFORMATION" fullword wide ascii nocase
-
+        $a14 = "NOT RELEASABLE TO FOREIGN NATIONALS" fullword wide ascii nocase
+        $a15 = /\/(RELIDO|NOFORN|ORCON)/ fullword wide ascii nocase         # Special dissemination markings. Preceded by a slash if multiple disseminations or a double slash if first one.
+        $a16 = /\/\/JOINT / fullword wide ascii nocase                      # For multi-countries joint classification marking.
+        $a17 = /\/\/REL TO / fullword wide ascii nocase                     # For releasable to markings
+        $a18 = /\/HCS/ fullword wide ascii nocase                           # For SCI for HUMINT Control System
+        $a19 = /\/KDK/ fullword wide ascii nocase                           # For SCI Klondike for Geospatial Intelligence
+        $a20 = "DEA SENSITIVE" fullword wide ascii nocase
+        $a21 = /\/DISPLAY ONLY / fullword wide ascii nocase
+        $a22 = "LAW ENFORCEMENT SENSITIVE" fullword wide ascii nocase
+        $a23 = /-ECI [A-Z]{3}(,|\/)/ fullword wide ascii nocase                   # For Exceptionally Controlled information
+        
     condition:
         1 of ($a*)
 

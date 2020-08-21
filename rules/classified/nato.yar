@@ -13,6 +13,11 @@ rule nato
         $a5 = "NATO RESTRICTED" fullword wide ascii nocase
         $a6 = "THIS DOCUMENT CONTAINS NATO CLASSIFIED INFORMATION" fullword wide ascii nocase
         $a7 = "NATO UNCLASSIFIED - INTERNAL" fullword wide ascii nocase
+        
+        $a8 = /Tr[è|e]s Secret Cosmic/ fullword wide ascii nocase
+        $a9 = "Secret OTAN" fullword wide ascii nocase
+        $a10 = "Confidentiel OTAN" fullword wide ascii nocase
+        $a11 = "Diffusion restreinte OTAN" fullword wide ascii nocase
 
     condition:
         1 of ($a*)

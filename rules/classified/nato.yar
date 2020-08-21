@@ -12,6 +12,7 @@ rule nato
         $a4 = "NATO CONFIDENTIAL" fullword wide ascii nocase
         $a5 = "NATO RESTRICTED" fullword wide ascii nocase
         $a6 = "THIS DOCUMENT CONTAINS NATO CLASSIFIED INFORMATION" fullword wide ascii nocase
+        $a7 = "NATO UNCLASSIFIED - INTERNAL" fullword wide ascii nocase
 
     condition:
         1 of ($a*)

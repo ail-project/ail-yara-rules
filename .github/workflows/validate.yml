@@ -24,6 +24,8 @@ jobs:
         git clone https://github.com/VirusTotal/yara.git
         cd yara
         sudo bash build.sh
+        sudo make install
+        sudo ldconfig
 
     - name: Test with yara
       run: |

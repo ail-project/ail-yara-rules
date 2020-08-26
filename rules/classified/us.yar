@@ -28,8 +28,7 @@ rule us
         $a20 = "DEA SENSITIVE" fullword wide ascii nocase
         $a21 = /\/DISPLAY ONLY / fullword wide ascii nocase
         $a22 = "LAW ENFORCEMENT SENSITIVE" fullword wide ascii nocase
-        $a23 = /-ECI [A-Z]{3}(,|\/)/ fullword wide ascii nocase                   # For Exceptionally Controlled information
-        
+
     condition:
         1 of ($a*)
 

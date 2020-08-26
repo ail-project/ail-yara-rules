@@ -21,9 +21,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        apt-get install yara
-        pip install poetry
-        poetry install
+        sudo apt-get install yara
 
     - name: Test with yara
       run: |

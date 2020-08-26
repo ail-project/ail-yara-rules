@@ -21,7 +21,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get install yara
+        git clone git@github.com:VirusTotal/yara.git
+        cd yara
+        sudo bash build.sh
 
     - name: Test with yara
       run: |
